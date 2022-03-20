@@ -1,5 +1,5 @@
-# OASIS-Pro
-Team 23
+# Team 23
+
 - Han Lu
 - John Nguyen
 - Mojeed George
