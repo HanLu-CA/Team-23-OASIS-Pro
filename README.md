@@ -1,6 +1,5 @@
 # OASIS-Pro
-COMP 3004(W22) Team Project
-
+Team 23
 - Han Lu
 - John Nguyen
 - Mojeed George
