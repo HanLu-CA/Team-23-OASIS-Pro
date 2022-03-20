@@ -13,4 +13,4 @@ COMP 3004(W22) Team Project
 - [ ] Han: General code design & UML Class Diagram
 - [ ] John: UI icons and buttons
 - [ ] Mojeed: Use case & Use case Diagram
-- [ ] Xiuling: Sequence Diagram & traceability matrix
+- [x] Xiuling: Sequence Diagram & traceability matrix
