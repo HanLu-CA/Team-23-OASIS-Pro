@@ -5,7 +5,7 @@
 - Mojeed George
 - Xiuling Pan
 
-# Weekly mission log
+# Mission Log
 
 ### Stage I (03/14 to 03/20):
 
