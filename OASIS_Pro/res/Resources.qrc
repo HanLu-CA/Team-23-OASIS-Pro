@@ -49,25 +49,43 @@
         <file>icons/CES mode/rightCES_green.png</file>
         <file>icons/CES mode/spulse_default.png</file>
         <file>icons/CES mode/spulse_red.png</file>
-        <file>icons/tDCS/level1_default.png</file>
-        <file>icons/tDCS/level1_green.png</file>
-        <file>icons/tDCS/level2_default.png</file>
-        <file>icons/tDCS/level2_green.png</file>
-        <file>icons/tDCS/level3_default.png</file>
-        <file>icons/tDCS/level3_green.png</file>
-        <file>icons/tDCS/level4_default.png</file>
-        <file>icons/tDCS/level4_yellow.png</file>
-        <file>icons/tDCS/level5_default.png</file>
-        <file>icons/tDCS/level5_yellow.png</file>
-        <file>icons/tDCS/level6_default.png</file>
-        <file>icons/tDCS/level6_yellow.png</file>
-        <file>icons/tDCS/level7_default.png</file>
-        <file>icons/tDCS/level7_red.png</file>
-        <file>icons/tDCS/level8_default.png</file>
-        <file>icons/tDCS/level8_red.png</file>
         <file>icons/tDCS/tDCS_default.png</file>
         <file>icons/tDCS/tDCS_green.png</file>
         <file>icons/tDCS/tDCS_red.png</file>
         <file>icons/tDCS/tDCS_yellow.png</file>
+        <file>icons/tDCS/+1_default.png</file>
+        <file>icons/tDCS/+1_red.png</file>
+        <file>icons/tDCS/+2_default.png</file>
+        <file>icons/tDCS/+2_red.png</file>
+        <file>icons/tDCS/0.25_default.png</file>
+        <file>icons/tDCS/0.25_green.png</file>
+        <file>icons/tDCS/0.50_default.png</file>
+        <file>icons/tDCS/0.50_green.png</file>
+        <file>icons/tDCS/0.75_default.png</file>
+        <file>icons/tDCS/0.75_green.png</file>
+        <file>icons/tDCS/1.00_default.png</file>
+        <file>icons/tDCS/1.00_yellow.png</file>
+        <file>icons/tDCS/1.50_default.png</file>
+        <file>icons/tDCS/1.50_yellow.png</file>
+        <file>icons/tDCS/2.00_default.png</file>
+        <file>icons/tDCS/2.00_yellow.png</file>
+        <file>icons/connection/lev1_default.png</file>
+        <file>icons/connection/lev1_green.png</file>
+        <file>icons/connection/lev2_default.png</file>
+        <file>icons/connection/lev2_green.png</file>
+        <file>icons/connection/lev3_default.png</file>
+        <file>icons/connection/lev3_green.png</file>
+        <file>icons/connection/lev4_default.png</file>
+        <file>icons/connection/lev4_yellow.png</file>
+        <file>icons/connection/lev5_default.png</file>
+        <file>icons/connection/lev5_yellow.png</file>
+        <file>icons/connection/lev6_default.png</file>
+        <file>icons/connection/lev6_yellow.png</file>
+        <file>icons/connection/lev7_default.png</file>
+        <file>icons/connection/lev7_red.png</file>
+        <file>icons/connection/lev8_default.png</file>
+        <file>icons/connection/lev8_red.png</file>
+        <file>icons/misc/audio_input_default.png</file>
+        <file>icons/misc/CES_output_default.png</file>
     </qresource>
 </RCC>
