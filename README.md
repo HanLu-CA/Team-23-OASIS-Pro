@@ -25,3 +25,12 @@
 - [ ] Mojeed: 
 - [ ] Xiuling: 
 
+
+### Waited for finnishing:
+- [ ] Power: If no session is selected within two (2) minutes, the Oasis Pro will turn off
+- [ ] Battery level: 
+- [ ] Selecting a session: selecting each icon through device
+- [ ] Connection test: UI display each side of ear clip, and ...
+- [ ] Intensity: Adjusting intensity through device button
+- [ ] Recording: implement DBManager class, Record class.
+
