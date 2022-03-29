@@ -26,9 +26,10 @@
 - [ ] Xiuling: 
 
 
-### Waited for finnishing:
+# Features waited for finnishing
 - [ ] Power: If no session is selected within two (2) minutes, the Oasis Pro will turn off
-- [ ] Battery level: 
+- [ ] Battery level: battery level and battery low warnings, should handle battery 
+                     depletion as a function of length of therapy and intensity
 - [ ] Selecting a session: selecting each icon through device
 - [ ] Connection test: UI display each side of ear clip, and ...
 - [ ] Intensity: Adjusting intensity through device button
