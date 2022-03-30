@@ -20,7 +20,7 @@
 
 ### Week III (03/28 to 04/01):
 
-- [ ] Han: 
+- [x] Han: Implemented session class and several UI features 
 - [ ] John: 
 - [ ] Mojeed: 
 - [ ] Xiuling: 
