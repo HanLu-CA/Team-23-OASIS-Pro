@@ -20,14 +20,20 @@ forms_dir = ui
 resources_dir = res
 
 SOURCES += \
-    $${source_dir}/main.cpp \
-    $${source_dir}/mainwindow.cpp
+    src/main.cpp \
+    src/mainwindow.cpp \
+    src/record.cpp \
+    src/session.cpp \
+    src/dbmanager.cpp
 
 HEADERS += \
-    $${source_dir}/mainwindow.h
+    src/mainwindow.h \
+    src/record.h \
+    src/session.h \
+    src/dbmanager.h
 
 FORMS += \
-    $${forms_dir}/mainwindow.ui
+    ui/mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -35,5 +41,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    $${resources_dir}/Resources.qrc
+    res/Resources.qrc
 
