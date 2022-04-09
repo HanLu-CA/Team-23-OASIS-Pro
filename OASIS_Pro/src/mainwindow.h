@@ -30,6 +30,7 @@ private:
     Ui::MainWindow *ui;
     QTimer longClickTimer;
     QTimer blinkTimer;
+    QTimer powerSaveTimer;
 
     double batteryCurrent;
     double batteryDecayRate;
@@ -53,6 +54,7 @@ private:
 
     //helpers
     void init();
+    void powerSave();
     void setEnable(bool);
     void setVisible_();
     void delayFor(int);

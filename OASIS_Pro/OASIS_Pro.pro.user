@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.0, 2022-04-06T03:26:00. -->
+<!-- Written by QtCreator 4.11.0, 2022-04-09T16:39:02. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -285,8 +285,9 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/student/OASIS_Pro/OASIS_Pro.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/student/OASIS_Pro/OASIS_Pro.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">OASIS_Pro2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/media/sf_VM_Share/CIOMP3004/OASIS_Pro/OASIS_Pro.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/media/sf_VM_Share/CIOMP3004/OASIS_Pro/OASIS_Pro.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>

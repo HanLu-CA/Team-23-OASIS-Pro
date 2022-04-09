@@ -24,6 +24,7 @@ class Session: public QObject {
         void setSesDuration(int);
         void setSesType(QString);
         void reduceSesLength();
+        void resetSes();
 
         int getSesLength();
         int getSesDuration();

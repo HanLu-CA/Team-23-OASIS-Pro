@@ -53,6 +53,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     connect(ui->button_clearRecord, SIGNAL(released()), this, SLOT(recClear()));
 
     connect(currentSession->getTimer(), &QTimer::timeout, this, &MainWindow::countdown);
+    connect(&powerSaveTimer, &QTimer::timeout, this, &MainWindow::powerSave);
 }
 MainWindow::~MainWindow() {
     for (int i = 0; i < numSes; i++)
@@ -94,6 +95,15 @@ void MainWindow::init() {
     numRec = 0;
     sessionDesigned = new Session*[SES_MAX];
     recordList = new Record*[REC_MAX];
+}
+
+void MainWindow::powerSave(){
+    if(powerStatus){
+        if (currentSession->getSesType() == "n/a"){
+            ui->logDisplay->append("Power save timer out");
+            powerOn_Off();
+        }
+    }
 }
 
 //changing icons accordingly when power is on or off
@@ -152,6 +162,9 @@ void MainWindow::powerOn_Off() {
             ui->logDisplay->append("Power On!");
             setEnable(true);
             ui->ses_fast->setEnabled(true);
+            //for demo set to 10secs
+            if (currentSession->getSesType() == "n/a") powerSaveTimer.start(10*1000);
+
         }
         else {
             ui->logDisplay->append("Power Off!");
@@ -179,11 +192,13 @@ void MainWindow::setLabelSize(int width, int height) {
 void MainWindow::leftClipOn_Off() {
     leftClipStatus = !leftClipStatus;
     if (leftClipStatus) {
+        if (rightClipStatus && cesJack) ui->connection->setValue(1);
         ui->logDisplay->append("Left ear clip connected!");
         if (cesJack && powerStatus)
             ui->ces_left->setStyleSheet("border-image:url(:/icons/CES mode/leftCES_yellow.png)");
     }
     else {
+        ui->connection->setValue(3);
         ui->logDisplay->append("Left ear clip disconnected!");
         ui->ces_left->setStyleSheet("border-image:url(:/icons/CES mode/leftCES_default.png)");
     }
@@ -193,11 +208,13 @@ void MainWindow::leftClipOn_Off() {
 void MainWindow::rightClipOn_Off() {
     rightClipStatus = !rightClipStatus;
     if (rightClipStatus) {
+        if (leftClipStatus && cesJack) ui->connection->setValue(1);
         ui->logDisplay->append("Right ear clip connected!");
         if (cesJack && powerStatus)
             ui->ces_right->setStyleSheet("border-image:url(:/icons/CES mode/rightCES_green.png)");
     }
     else {
+        ui->connection->setValue(3);
         ui->logDisplay->append("Right ear clip disconnected!");
         ui->ces_right->setStyleSheet("border-image:url(:/icons/CES mode/rightCES_default.png)");
     }
@@ -220,6 +237,7 @@ void MainWindow::audioSigOn_Off() {
 void MainWindow::cesSigOn_Off() {
     cesJack = !cesJack;
     if (cesJack) {
+        if (rightClipStatus && leftClipStatus) ui->connection->setValue(1);
         ui->logDisplay->append("CES jack is connected");
         if (powerStatus) {
             ui->ces_jack->setStyleSheet("border-image:url(:/icons/misc/CES_output_yellow.png)");
@@ -231,6 +249,7 @@ void MainWindow::cesSigOn_Off() {
         }
         return;
     }
+    ui->connection->setValue(3);
     ui->logDisplay->append("CES jack is disconnected!");
     ui->ces_jack->setStyleSheet("border-image:url(:/icons/misc/CES_output_default.png)");
     ui->ces_right->setStyleSheet("border-image:url(:/icons/CES mode/rightCES_default.png)");
@@ -397,6 +416,10 @@ void MainWindow::countdown() {
     ui->battery_state->setText(battery_text + "%");
     batteryCurrent -= batteryDecayRate;
     batteryIconUpdate();
+    if (leftClipStatus == false || rightClipStatus == false || cesJack == false) {
+        pauseResume();
+        ui->logDisplay->append("Ces earclips disconnected");
+    }
     // when session times out
     if (currentSession->getSesLength() == -1) {
         ui->logDisplay->append("Session finished.");
@@ -406,7 +429,11 @@ void MainWindow::countdown() {
         currentSession->getTimer()->stop();
         sessionStatus = false;
         addRecord();
+        currentSession->resetSes();
+        //for demo set to 10secs
+        powerSaveTimer.start(10*1000);
     }
+
 }
 
 //adding record to history list
