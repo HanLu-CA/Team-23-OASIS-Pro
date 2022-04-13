@@ -163,7 +163,7 @@ void MainWindow::powerOn_Off() {
             setEnable(true);
             ui->ses_fast->setEnabled(true);
             //for demo set to 10secs
-            if (currentSession->getSesType() == "n/a") powerSaveTimer.start(10*1000);
+            if (currentSession->getSesType() == "n/a") powerSaveTimer.start(60*1000);
 
         }
         else {
@@ -414,7 +414,12 @@ void MainWindow::countdown() {
     currentSession->reduceSesLength();
     QString battery_text = QString::number(batteryCurrent);
     ui->battery_state->setText(battery_text + "%");
-    batteryCurrent -= batteryDecayRate;
+    if(batteryCurrent - batteryDecayRate > 0){
+        batteryCurrent -= batteryDecayRate;
+    }else{
+        batteryCurrent = 0;
+    }
+
     batteryIconUpdate();
     if (leftClipStatus == false || rightClipStatus == false || cesJack == false) {
         pauseResume();
@@ -431,7 +436,7 @@ void MainWindow::countdown() {
         addRecord();
         currentSession->resetSes();
         //for demo set to 10secs
-        powerSaveTimer.start(10*1000);
+        powerSaveTimer.start(60*1000);
     }
 
 }
@@ -485,7 +490,7 @@ void MainWindow::batteryIconUpdate() {
             batteryWeak = true;
         }
     }
-    else if (batteryCurrent <= -1){
+    else if (batteryCurrent <= 0){
         ui->battery_state->setStyleSheet("border-image: url(:/overlay/bat_emp.png)");
         ui->logDisplay->append("Battery is fully depleted");
 
