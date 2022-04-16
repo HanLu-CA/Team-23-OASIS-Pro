@@ -1,4 +1,4 @@
-<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>650</x><y>106</y><w>230</w><h>660</h></coordinates><panel_attributes>MainWindow
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>410</x><y>326</y><w>230</w><h>660</h></coordinates><panel_attributes>MainWindow
 --
 - batteryCurrent: double
 - batteryDecayRate: double
@@ -13,6 +13,8 @@
 - sessionStatus: bool
 - batteryWeak: bool
 - addingSes: bool
+- tdcs_label: QLabel[8]
+- connectionlev_label: QLabel[8]
 --
 - init()
 - powerSave()
@@ -43,31 +45,29 @@
 - deleteSession()
 - logClear()
 - recClear()
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>506</y><w>160</w><h>60</h></coordinates><panel_attributes>
-UI</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>836</y><w>160</w><h>60</h></coordinates><panel_attributes>
-QMainWindow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>986</y><w>160</w><h>60</h></coordinates><panel_attributes>
-QObject</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>756</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>886</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>526</y><w>280</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>260;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>646</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>726</y><w>160</w><h>60</h></coordinates><panel_attributes>
+UI</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>1056</y><w>160</w><h>60</h></coordinates><panel_attributes>
+QMainWindow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>1206</y><w>160</w><h>60</h></coordinates><panel_attributes>
+QObject</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>976</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>1106</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>746</y><w>280</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>260;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>886</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
 m1=1..*
-- programs</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>686</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
-m1=1..*
-- frequencies</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1050</x><y>656</y><w>210</w><h>100</h></coordinates><panel_attributes>Session
+- sessionDesigned</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>876</y><w>210</w><h>100</h></coordinates><panel_attributes>Session
 --
 - ses_type: QString
 - ses_length: int
 - ses_duration: int
 - timer: QTimer*
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>726</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>926</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
 m1=1
-- currentSession</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>746</y><w>350</w><h>290</h></coordinates><panel_attributes>lt=&lt;&lt;-
-m1=</panel_attributes><additional_attributes>10;270;330;270;330;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1060</x><y>266</y><w>210</w><h>100</h></coordinates><panel_attributes>Record
+- currentSession</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>966</y><w>350</w><h>290</h></coordinates><panel_attributes>lt=&lt;&lt;-
+m1=</panel_attributes><additional_attributes>10;270;330;270;330;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>820</x><y>486</y><w>210</w><h>100</h></coordinates><panel_attributes>Record
 --
 - session_type: QString
 - session_length: int
 - session_int: QString
 - session_time: QString
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>286</y><w>210</w><h>60</h></coordinates><panel_attributes>m1=*
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>506</y><w>210</w><h>60</h></coordinates><panel_attributes>m1=*
 
 lt=&lt;&lt;&lt;-
 
