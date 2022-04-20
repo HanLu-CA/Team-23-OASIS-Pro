@@ -1,42 +1,38 @@
-COMP 3004
-FINAL PROJECT
-TEAM 23
+# COMP 3004 FINAL PROJECT TEAM 23
 
-MOJEED GEORGE, HAN LU, JOHN NGUYEN, XIULING PAN
+##### MOJEED GEORGE
 
+- [x] UI
+- [x] USE CASE MODEL
+- [x] USE CASE DIAGRAM
+- [x] RECORD CLASS IMPLEMENTATION
+- [x] SESSION CLASS IMPLEMENTATION
 
-MOJEED GEORGE
-UI
-USE CASE MODEL
-USE CASE DIAGRAM
-RECORD CLASS IMPLEMENTATION
-SESSION CLASS IMPLEMENTATION
+##### HAN LU
 
-HAN LU
-UI
-UML CLASS DIAGRAM
-CODE DESIGN
-BUTTONS FEATURE
-PROGRAM LOGIC
+- [x] UI
+- [x] UML CLASS DIAGRAM
+- [x] CODE DESIGN
+- [x] BUTTONS FEATURE
+- [x] PROGRAM LOGIC
 
+##### JOHN NGUYEN
 
-JOHN NGUYEN
-UI
-BUTTONS FEATURE
-PROGRAM LOGIC
-SESSION CLASS IMPLEMENTATION
-RECORD CLASS IMPLEMENTATION
+- [x] UI
+- [x] BUTTONS FEATURE
+- [x] PROGRAM LOGIC
+- [x] SESSION CLASS IMPLEMENTATION
+- [x] RECORD CLASS IMPLEMENTATION
 
+##### XIULING PAN
 
-XIULING PAN
-UI
-SEQUENCE DIAGRAM
-TRACEABILITY MATRIX
-BUTTONS FEATURE
-PROGRAM LOGIC
+- [x] UI
+- [x] SEQUENCE DIAGRAM
+- [x] TRACEABILITY MATRIX
+- [x] BUTTONS FEATURE
+- [x] PROGRAM LOGIC
 
-
-FILE ORGANIZATION
+### FILE ORGANIZATION
 
 1. Design documentation
 2. Res
@@ -51,8 +47,7 @@ In the src folder, it includes all the source codes, which are main.cpp, mainwin
 
 In the ui folder, it contains the mainwindow.ui 
 
-
-INSTRUCTION
+#### INSTRUCTION
 
 - Press the Power Button to turn on the device (3s delay)
 - Press connection buttons to connect CES input, left/right earclip (these has to be turned on in order to run a session)
@@ -66,18 +61,17 @@ INSTRUCTION
 - Press the INT up/down button to increase/decrease intensity (this can also be done during a running session)
 - Select the connectivity from the drop-down list to manually adjust the connectivity
 
-
-TESTED SCENARIOS
+#### TESTED SCENARIOS
 
 The scenarios which worked are
 
-Turning on the device with a long hold until the led lights come on
-Turning off the device with a long hold until the led lights go off
-Selecting a session
-Ending a session
-Saving user designated session
-Connecting the earclips and disconnecting them
-Connection test
-We are able to adjust the intensity
-We are able to save preferences
-Pausing and resuming the session and so on.
+- Turning on the device with a long hold until the led lights come on
+- Turning off the device with a long hold until the led lights go off
+- Selecting a session
+- Ending a session
+- Saving user designated session
+- Connecting the earclips and disconnecting them
+- Connection test
+- We are able to adjust the intensity
+- We are able to save preferences
+- Pausing and resuming the session and so on.
